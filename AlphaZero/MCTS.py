@@ -14,11 +14,11 @@ class MCTS():
     This class handles the MCTS tree.
     """
 
-    def __init__(self, game, nnet):
+    def __init__(self, game, nnet, num_sims = 100):
         self.game = game
         self.nnet = nnet
         #self.args = args
-        self.numMCTSSims = 25
+        self.numMCTSSims = num_sims
         self.cpuct = 1
         self.Qsa = {}  # stores Q values for s,a (as defined in the paper)
         self.Nsa = {}  # stores #times edge s,a was visited
